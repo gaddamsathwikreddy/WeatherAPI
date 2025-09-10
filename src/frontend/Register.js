@@ -18,7 +18,7 @@ function Register() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5001/register", {
+      const res = await axios.post("https://8vs4gc-5001.csb.app/register", {
         email,
         password,
       });
@@ -73,7 +73,11 @@ function Register() {
   };
 
   const errorStyle = { color: "red", marginBottom: "10px", fontSize: "14px" };
-  const successStyle = { color: "green", marginBottom: "10px", fontSize: "14px" };
+  const successStyle = {
+    color: "green",
+    marginBottom: "10px",
+    fontSize: "14px",
+  };
 
   return (
     <div style={container}>

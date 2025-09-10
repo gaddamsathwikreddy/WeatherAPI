@@ -19,14 +19,14 @@ function Login() {
     }
 
     try {
-      const res = await axios.post("http://127.0.0.1:5001/login", {
+      const res = await axios.post("https://8vs4gc-5001.csb.app/login", {
         email,
         password,
       });
 
       // Save token in localStorage
       localStorage.setItem("token", res.data.token);
-      navigate('/dashboard')
+      navigate("/dashboard");
       setError("");
     } catch (err) {
       setError(err.response?.data?.msg || "Invalid email or password");
